@@ -1067,7 +1067,7 @@ del {
           margin-top: 7%;/* khater checkout price yetghata ki tesghar l'ecran*/
      }
      .ordered-products {
-          margin-top: 20%;
+          margin-top: 30%;
      }
      .ordered-products .btn {
           font-size: 16px;
@@ -1132,7 +1132,6 @@ del {
           grid-template-columns: repeat(1,200px);
           justify-content: center;
           row-gap: 40px;
-          margin-top:30%;
      }
      
      .grand-total{
