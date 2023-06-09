@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tati books</title>
+    <!-- the main css file  -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- normalise file  to rendre all the element normal-->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- link swiper css -->
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <!-- web fonts library -->
+    <script src="https://kit.fontawesome.com/f50d113512.js" crossorigin="anonymous"></script>
+    <!-- fav icon -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!--  aos library  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+<body>
+    <!-- start header -->
+    <header>
+         <!-- logo -->
+        <div class="nav container">
+            <a href="index.html" class="logo">Tati <span>Books</span></a>
+            <!-- the search -->
+            <div class="search-box">
+                <input type="search" name ="search" id="search-input" placeholder="Search Book" onkeyup="search()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!-- icons -->
+            <div class="icons">
+                <i class="fa-solid fa-user"></i>
+            </div>
+           <div id="modal">
+                <div class="overlay"></div>
+                <div class="body">
+                    <button class="modal-close">X</button><!-- the close button -->
+                    <div class="form">
+                        <h2>Log in</h2>
+                        <div class="form-element">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="password">Password</label>
+                            <input type="password" id="email" placeholder="Enter password" required>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" id="remembre-me" required>
+                            <label for="remembre-me">Remember me</label>
+                        </div>
+                        <div class="form-element">
+                            <button>sign in </button>
+                        </div>
+                        <div class="form-element">
+                            <a href="#">Forget password?</a>
+                        </div>
+                    </div>
+                </div>
+           </div> 
+        </div>
+        <div class="product-list" id="product-list" style="display: none;">
+            <div class="close-btn" onclick="closeSearch()">x</div>
+            <div class="product" onclick="openPage()">
+              <img src="/img/atomic habits.jpg" alt="">
+              <div class="p-details">
+                <h2>Atomic Habits</h2>
+                <h3>28DT</h3>
+              </div>
+            </div>
+            <div class="product">
+              <img src="/img/Do it Today.jpg" alt="">
+              <div class="p-details">
+                <h2>Do it today</h2>
+                <h3>30DT</h3>
+              </div>
+            </div>
+            <div class="product">
+              <img src="/img/boring_girls_a_novel.jpg" alt="">
+              <div class="p-details">
+                <h2>Boring girls</h2>
+                <h3>35DT</h3>
+              </div>
+            </div>
+            <div class="product">
+              <img src="/img/nightshade.jpg" alt="">
+              <div class="p-details">
+                <h2>Night shade</h2>
+                <h3>50DT</h3>
+              </div>
+            </div>
+            <div class="product">
+              <img src="/img/crime and punishment.jpg" alt="" width="70px">
+              <div class="p-details">
+                <h2>Crime and punishment</h2>
+                <h3>50DT</h3>
+              </div>
+            </div>
+          </div>
+          
+         <!-- NavBar -->
+         <div class="navbar">
+            <a href="index.html" class="nav-link nav-active">
+                <i class="fa-solid fa-house"></i>
+                <span class="nav-link-title">Home</span>
+            </a>
+            <a href="#home" class="nav-link">
+                <i class="fa-sharp fa-solid fa-fire"></i>
+                <span class="nav-link-title">Trending</span>
+            </a>
+            <a href="#home" class="nav-link">
+                <i class="fa-solid fa-compass"></i>
+                <span class="nav-link-title">Explore </span>
+            </a>
+            <a href="orders.html" class="nav-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="nav-link-title">your cart</span>
+            
+            </a>
+            <a href="#home" class="nav-link">
+                <i class="fa-solid fa-heart"></i>
+                <span class="nav-link-title">Favorite</span>
+            </a>
+        </div>
+    </header>
+    <!-- end header  -->
+    <!--  start contact-forum -->
+    <div class="container border-container forum-conta">
+        <h1>Contact Forum</h1>
+        <form class="contact-forum">
+            <input type="text" name="Name" placeholder="Full Name" required>
+            <input typee="email" name="Email" placeholder="Email" required>
+            <select>
+                <option>Choose a country</option>
+                <option>Egypt</option>
+                <option>Tunisa</option>
+                <option>Maroco</option>
+                <option>Algeria</option>
+                <option>Libya</option>
+            </select>
+            <textarea name="Message" placeholder="Message" cols="30" rows="10" required></textarea>
+            <button type="submit" onclick="popFunc()">Submit</button>
+
+        </form>
+    </div>
+        
+    <!-- end contact forum -->
+    <section class=" container contact" data-aos="fade-up"
+    data-aos-duration="800">
+        <div>
+            <ul>
+            <li><h3 class="title">Quick Links</h3></li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Shop</li>
+            <li>Contact</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Extra Links</h3></li>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Cart</li>
+            <li>Orders</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Contact-info</h3></li>
+            <li><i class="fa-solid fa-phone"></i>+216 29432423</li>
+            <li><i class="fa-solid fa-phone"></i>+216 55 805 325</li>
+            <li><i class="fa-solid fa-envelope"></i>ManelTati@gmail.com</li>
+            <li><i class="fa-solid fa-location-dot"></i>tunisia,tunis-2021</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Follow Us</h3></li>
+            <li><i class="fa-brands fa-facebook-f"></i>facebook</li>
+            <li><i class="fa-brands fa-twitter"></i>twitter</li>
+            <li><i class="fa-brands fa-instagram"></i>instagram</li>
+            <li><i class="fa-brands fa-linkedin"></i>linkedin</li>
+            </ul>
+        </div>
+    </section>
+
+   
+    <!-- end contact section -->
+    <!-- link of swiper js -->
+    <script src="js/swiper-bundle.min.js "></script>
+    <!-- link of js file  -->
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <titlet>checkout</titlet>
+    <!-- the main css file  -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- normalise file  to rendre all the element normal-->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- link swiper css -->
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <!-- web fonts library -->
+    <script src="https://kit.fontawesome.com/f50d113512.js" crossorigin="anonymous"></script>
+    <!-- fav icon -->
+    <!-- aos library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <header>
+        <!-- logo -->
+       <div class="nav container" data-aos="zoom-in"data-aos-duration="1000">
+           <a href="index.html" class="logo">Tati <span>Books</span></a>
+           <!-- the search -->
+           <div class="search-box">
+               <input type="search" name ="search" id="search-input" placeholder="Search Book">
+               <i class="fa-solid fa-magnifying-glass"></i>
+           </div>
+           <!-- icons -->
+           <div class="icons">
+               <i class="fa-solid fa-book"></i>
+           </div>
+        </div>
+          <!-- NavBar -->
+           <div class="navbar">
+               <a href="index.html" class="nav-link ">
+                   <i class="fa-solid fa-house"></i>
+                   <span class="nav-link-title">Home</span>
+               </a>
+               <a href="#home" class="nav-link">
+                   <i class="fa-sharp fa-solid fa-fire"></i>
+                   <span class="nav-link-title">Trending</span>
+               </a>
+               <a href="#home" class="nav-link">
+                   <i class="fa-solid fa-compass"></i>
+                   <span class="nav-link-title">Explore </span>
+               </a>
+               <a href="orders.html" class="nav-link nav-active">
+                   <i class="fa-solid fa-cart-shopping"></i>
+                   <span class="nav-link-title">your cart</span>
+               </a>
+               <a href="#home" class="nav-link">
+                   <i class="fa-solid fa-heart"></i>
+                   <span class="nav-link-title">Favorite</span>
+               </a>
+           </div>
+    </header>
+    <section class="container checkout ">
+        <h4>grand total : <span>338DT/-</span></h4>
+        <div class="check-orders">
+            <div class="ordered"><span class="title">the atomic habits </span><span class="price">(28DT/1)</span></div>
+            <div class="ordered"><span class="title">the mountain is you </span><span class="price">(35DT/2)</span></div>
+            <div class="ordered"><span class="title">Do it Today </span><span class="price">(60DT/3)</span></div>
+            <div class="ordered"><span class="title">Master your emotions</span> <span class="price">(30DT/2)</span></div>
+        </div>
+        <div class="check-forum">
+            <div class="first-forum">
+                <form action="">
+                    <div class="label-container">
+                        <label for="name">your name:</label>
+                        <input type="text" placeholder="enter your name">
+                    </div>
+                    <div class="label-container">
+                        <label for="name">your email:</label>
+                        <input type="email" placeholder="enter your email">
+                    </div>
+                    <div class="label-container">
+                        <label for="name">adresse line 01:</label>
+                        <input type="text" placeholder="e.g.flat no.">
+                    </div>
+                    <div class="label-container">
+                        <label for="name">city:</label>
+                        <input type="text" placeholder="e.g.tunis">
+                    </div>
+                    <div class="label-container">
+                        <label for="name">country:</label>
+                        <input type="text" placeholder="e.g.tunisia">
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="second-forum">
+                <div class="label-container">
+                    <label for="name">your number:</label>
+                    <input type="text" placeholder="enter your number">
+                </div>
+                <div class="label-container">
+                    <label for="name">payment method:</label>
+                        <select id="cars" name="cars">
+                            <option value="cash">cash on delivery</option>
+                            <option value="credit">credit card</option>
+                            <option value="paypal">paypal</option>
+                            <option value="paytm">paytm</option>
+                        </select>
+                </div>
+                <div class="label-container">
+                    <label for="name">adresse line 01:</label>
+                    <input type="email" placeholder="e.g.street name">
+                </div>
+                <div class="label-container">
+                    <label for="name">state:</label>
+                    <input type="text" placeholder="e.g.state name.">
+                </div>
+                <div class="label-container">
+                    <label for="name">pin code:</label>
+                    <input type="text" placeholder="e.g.tunis">
+                </div>
+            </div>
+
+        </div>
+        <button class="btn" onclick="popFunc()">order now</button>
+    </section>
+    <section class=" container contact" data-aos="fade-up"
+    data-aos-duration="800">
+        <div>
+            <ul>
+            <li><h3 class="title">Quick Links</h3></li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Shop</li>
+            <li>Contact</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Extra Links</h3></li>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Cart</li>
+            <li>Orders</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Contact-info</h3></li>
+            <li><i class="fa-solid fa-phone"></i>+216 29432423</li>
+            <li><i class="fa-solid fa-phone"></i>+216 55 805 325</li>
+            <li><i class="fa-solid fa-envelope"></i>ManelTati@gmail.com</li>
+            <li><i class="fa-solid fa-location-dot"></i>tunisia,tunis-2021</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Follow Us</h3></li>
+            <li><i class="fa-brands fa-facebook-f"></i>facebook</li>
+            <li><i class="fa-brands fa-twitter"></i>twitter</li>
+            <li><i class="fa-brands fa-instagram"></i>instagram</li>
+            <li><i class="fa-brands fa-linkedin"></i>linkedin</li>
+            </ul>
+        </div>
+
+        
+        
+        
+
+
+    </section>
+     <!-- link of js file  -->
+     <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

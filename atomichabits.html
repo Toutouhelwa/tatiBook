@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tati books</title>
+    <!-- the main css file  -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- normalise file  to rendre all the element normal-->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- link swiper css -->
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <!-- web fonts library -->
+    <script src="https://kit.fontawesome.com/f50d113512.js" crossorigin="anonymous"></script>
+    <!-- fav icon -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!--  aos library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+<body>
+    <!-- start header -->
+    <header>
+         <!-- logo -->
+        <div class="nav container">
+            <a href="index.html" class="logo">Tati <span>Books</span></a>
+            <!-- the search -->
+            <div class="search-box">
+                <input type="search" name ="search" id="search-input" placeholder="Search Book">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!-- icons -->
+            <div class="icons">
+                <i class="fa-solid fa-user"></i>
+            </div> 
+           <!-- NavBar -->
+            <div class="navbar">
+                <a href="#home" class="nav-link nav-active">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="nav-link-title">Home</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class="fa-sharp fa-solid fa-fire"></i>
+                    <span class="nav-link-title">Trending</span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class="fa-solid fa-compass"></i>
+                    <span class="nav-link-title">Explore </span>
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="nav-link-title">your cart</span>
+                
+                </a>
+                <a href="#home" class="nav-link">
+                    <i class="fa-solid fa-heart"></i>
+                    <span class="nav-link-title">Favorite</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- end header  -->
+    <div class="book-information container">
+        <div class="book">
+            <img src="/img/atomic habits.jpg">
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <hr>
+            <div class="author">
+                <div class="image">
+                    <img src="img/James Clear.jpg" alt="">
+                </div>
+                <h5>James Clear</h5>
+                <div class="follow-btn">Follow +</div>
+            </div>
+        </div>
+        <div class="info">
+            <input type="checkbox" id="check">
+            <h2>Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones </h2>
+            <h4><a href="jamesClear.html">James Clear</a></h4>
+            <p>No matter your goals, Atomic Habits offers a proven framework for improving - every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.
+
+                If you're having trouble changing your habits, the problem isn't you. The problem is your system. Bad habits repeat themselves again and again not because you don't want to change, but because you have the wrong system for change. You do not rise to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to new heights....
+            </p>
+            <div class="suite-info" id="suite" style="display: none;">
+                <p>
+                    Clear is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create an easy-to-understand guide for making good habits inevitable and bad habits impossible. Along the way, listeners will be inspired and entertained with true stories from Olympic gold medalists, award-winning artists, business leaders, life-saving physicians, and star comedians who have used the science of small habits to master their craft and vault to the top of their field.
+
+                    Learn how to:
+                    <ul>
+                        <li>Make time for new habits (even when life gets crazy)</li>
+                        <li>Overcome a lack of motivation and willpower</li>
+                        <li>Design your environment to make success easier</li>
+                        <li>Get back on track when you fall off course</li>
+                        <li>And much more</li>
+                    </ul>
+
+
+                </p>
+            </div>
+            <label for="check" id="checked" onclick="lessFunc()">Read More</label>
+        </div>
+    </div>
+    <div class="grand-info ">
+        <div class="grand-buttons">
+            <button class="btn"><a href="index.html">Home Page</a></button>
+            <button class="btn"><a href="orders.html">Add to cart</a></button>
+        </div>
+    </div>
+    <section class=" container contact" data-aos="fade-up"data-aos-duration="800">
+        <div>
+            <ul>
+            <li><h3 class="title">Quick Links</h3></li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Shop</li>
+            <li>Contact</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Extra Links</h3></li>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Cart</li>
+            <li>Orders</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Contact-info</h3></li>
+            <li><i class="fa-solid fa-phone"></i>+216 29432423</li>
+            <li><i class="fa-solid fa-phone"></i>+216 55 805 325</li>
+            <li><i class="fa-solid fa-envelope"></i>ManelTati@gmail.com</li>
+            <li><i class="fa-solid fa-location-dot"></i>tunisia,tunis-2021</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Follow Us</h3></li>
+            <li><i class="fa-brands fa-facebook-f"></i>facebook</li>
+            <li><i class="fa-brands fa-twitter"></i>twitter</li>
+            <li><i class="fa-brands fa-instagram"></i>instagram</li>
+            <li><i class="fa-brands fa-linkedin"></i>linkedin</li>
+            </ul>
+        </div>
+    </section>
+    <!-- link of js file  -->
+</body>
+<script src="js/main.js"></script>
+<script>
+    AOS.init();
+  </script>

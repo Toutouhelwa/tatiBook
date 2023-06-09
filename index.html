@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tati books</title>
+    <!-- the main css file  -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- normalise file  to rendre all the element normal-->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- link swiper css -->
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <!-- web fonts library -->
+    <script src="https://kit.fontawesome.com/f50d113512.js" crossorigin="anonymous"></script>
+    <!-- fav icon -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!--  aos library  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+<body>
+    <!-- start header -->
+    <header>
+         <!-- logo -->
+        <div class="nav container">
+            <a href="index.html" class="logo">Tati <span>Books</span></a>
+            <!-- the search -->
+            <div class="search-box">
+                <input type="search" name ="search" id="search-input" placeholder="Search Book" onkeyup="search()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!-- icons -->
+            <div class="icons">
+                <i class="fa-solid fa-user"></i>
+            </div>
+           <div id="modal">
+                <div class="overlay"></div>
+                <div class="body">
+                    <button class="modal-close">X</button><!-- the close button -->
+                    <div class="form">
+                        <h2>Log in</h2>
+                        <div class="form-element">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-element">
+                            <label for="password">Password</label>
+                            <input type="password" id="email" placeholder="Enter password" required>
+                        </div>
+                        <div class="form-element">
+                            <input type="checkbox" id="remembre-me" required>
+                            <label for="remembre-me">Remember me</label>
+                        </div>
+                        <div class="form-element">
+                            <button>sign in </button>
+                        </div>
+                        <div class="form-element">
+                            <a href="#">Forget password?</a>
+                        </div>
+                    </div>
+                </div>
+           </div> 
+        </div>
+        <div class="product-list" id="product-list" style="display: none;">
+            <div class="close-btn" onclick="closeSearch()">x</div>
+            <div class="product" onclick="openPage()">
+              <img src="/img/atomic habits.jpg" alt="">
+              <div class="p-details">
+                <h2>Atomic Habits</h2>
+                <h3>28DT</h3>
+              </div>
+            </div>
+            <div class="product">
+              <img src="/img/Do it Today.jpg" alt="">
+              <div class="p-details">
+                <h2>Do it today</h2>
+                <h3>30DT</h3>
+              </div>
+            </div>
+            <div class="product">
+              <img src="/img/boring_girls_a_novel.jpg" alt="">
+              <div class="p-details">
+                <h2>Boring girls</h2>
+                <h3>35DT</h3>
+              </div>
+            </div>
+            <div class="product">
+              <img src="/img/nightshade.jpg" alt="">
+              <div class="p-details">
+                <h2>Night shade</h2>
+                <h3>50DT</h3>
+              </div>
+            </div>
+            <div class="product">
+              <img src="/img/crime and punishment.jpg" alt="">
+              <div class="p-details">
+                <h2>Crime and punishment</h2>
+                <h3>50DT</h3>
+              </div>
+            </div>
+          </div>
+          
+         <!-- NavBar -->
+         <div class="navbar">
+            <a href="index.html" class="nav-link nav-active">
+                <i class="fa-solid fa-house"></i>
+                <span class="nav-link-title">Home</span>
+            </a>
+            <a href="#home" class="nav-link">
+                <i class="fa-sharp fa-solid fa-fire"></i>
+                <span class="nav-link-title">Trending</span>
+            </a>
+            <a href="#home" class="nav-link">
+                <i class="fa-solid fa-compass"></i>
+                <span class="nav-link-title">Explore </span>
+            </a>
+            <a href="orders.html" class="nav-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="nav-link-title">your cart</span>
+            
+            </a>
+            <a href="#home" class="nav-link">
+                <i class="fa-solid fa-heart"></i>
+                <span class="nav-link-title">Favorite</span>
+            </a>
+        </div>
+    </header>
+    <!-- end header  -->
+    <!-- home section -->
+    <section class="home container" id="home">
+        <div class="overlay"></div>
+        <!-- home-image -->
+        <img src="/img/home-bg.jpg" alt="" class="home-img">
+        <!-- home-text -->
+        <div class="home-text">
+            <h1 class="home-title"  data-aos="fade-up-right" data-aos-duration="600">Hand Picked Book To Your Door</h1>
+            <p  data-aos="fade-up-right"  data-aos-duration="800"><p>"Books are the plane and the train,and the road they are the destination,and the journey they are home"
+                <h4>-Anna Quindlen-</h4>
+            </p>
+            <button class ="btn"  data-aos="fade-up-left" data-aos-duration="800">Discover More</button>
+        </div>
+    </section>
+    <!-- End home -->
+    <!-- popular section start  -->
+    <section class="popular container" id="popular">
+        <!-- heading -->
+        <div class="heading">
+            <h2 class="heading-title">BEST SELLER</h2>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- swiper buttons -->
+            <div class="swiper-btn">
+            </div>
+        </div>
+        <div class="popular-content swiper">
+            <div class="swiper-wrapper">
+                <!-- book Box 1 -->
+                <div class="swiper-slide">
+                    <div class="book-box"  data-aos="fade-up"
+                    data-aos-duration="3000">
+                        <img src="/img/the mountain.jpg" class="book-box-img" onclick ="openOtherpage()">
+                        <div class="box-text">
+                            <h2 class="book-title">The mountain is you </h2>
+                            <h3>35DT <del>50DT</del></h3>
+                            <button>add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- book box 2 -->
+                <div class="swiper-slide">
+                    <div class="book-box"  data-aos="fade-up"
+                    data-aos-duration="3000">
+                        <img src="/img/atomic habits.jpg" class="book-box-img" onclick="openPage()">
+                        <div class="box-text">
+                            <h2 class="book-title">the atomic habits</h2>
+                           <h3>28DT <del>45DT</del></h3> 
+                            <button class="shop-btn"><a href="orders.html">add to cart</a></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- book box 3 -->
+                <div class="swiper-slide">
+                    <div class="book-box"  data-aos="fade-up"
+                    data-aos-duration="3000">
+                        <img src="img/master your emotions.jpg" class="book-box-img">
+                        <div class="box-text">
+                            <h2 class="book-title">Master your emotions</h2>
+                            <h3>30DT <del>55DT</del></h3>
+                            <button class="shop-btn"><a href="orders.html">add to cart</a></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- book box4 -->
+                <div class="swiper-slide">
+                    <div class="book-box"  data-aos="fade-up"
+                    data-aos-duration="3000">
+                        <img src="/img/the power of habits .jpg" class="book-box-img">
+                        <div class="box-text">
+                            <h2 class="book-title">the power of habits</h2>
+                            <h3>50DT <del>90DT</del></h3>
+                            <button class="shop-btn"><a href="orders.html">add to cart</a></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- book box5 -->
+                <div class="swiper-slide">
+                    <div class="book-box"  data-aos="fade-up"
+                    data-aos-duration="3000">
+                        <img src="img/power.jpg" class="book-box-img">
+                        <div class="box-text">
+                            <h2 class="book-title">the 48 laws of power</h2>
+                            <h3>60DT <del>100DT</del></h3>
+                            <button class="shop-btn"><a href="orders.html">add to cart</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <!-- best seller section End  -->
+    <!-- the books section start -->
+    <section class="books container" id="popular">
+        <div class="heading">
+            <h2 class="heading-title">LATEST PRODUCTS</h2>
+        </div>
+        <div class="container books-container">
+            <div class="book-box">
+                <img src="/img/clever_lands.jpg"class="book-box-img">
+                <div class="box-text" >
+                    <h2 class="book-title">Clever Lands</h2>
+                    <h3>35DT</h3>
+                    <button>add to cart</button>
+                </div>
+            </div>
+            <div class="book-box">
+                <img src="/img/economic.jpg" class="book-box-img" >
+                <div class="box-text">
+                    <h2 class="book-title">Artictural Economics</h2>
+                    <h3>120DT</h3>
+                    <button>add to cart</button>
+               </div>
+            </div>
+            <div class="book-box">
+                <img src="/img/boring_girls_a_novel.jpg" class="book-box-img" >
+                <div class="box-text">
+                    <h2 class="book-title">Boring Girls</h2>
+                    <h3>60DT</h3>
+                    <button>add to cart</button>
+               </div>
+            </div>
+            <div class="book-box">
+                <img src="/img/freefall.jpg" class="book-box-img" >
+                <div class="box-text">
+                    <h2 class="book-title">Free Fall </h2>
+                    <h3>70DT</h3>
+                    <button>add to cart</button>
+               </div>
+            </div>
+            <div class="book-box">
+                <img src="/img/history_of_modern_architecture.jpg" class="book-box-img" >
+                <div class="box-text">
+                    <h2 class="book-title">History of Modern Architecture </h2>
+                    <h3>140DT</h3>
+                    <button>add to cart</button>
+               </div>
+            </div>
+            <div class="book-box">
+                <img src="/img/holy_ghosts.jpg" class="book-box-img" >
+                <div class="box-text">
+                    <h2 class="book-title">Holy Ghosts </h2>
+                    <h3>70DT</h3>
+                    <button>add to cart</button>
+               </div>
+            </div>
+            <div class="book-box">
+                <img src="/img/nightshade.jpg" class="book-box-img" >
+                <div class="box-text">
+                    <h2 class="book-title">Night Shade </h2>
+                    <h3>50DT</h3>
+                    <button>add to cart</button>
+               </div>
+            </div>
+            <div class="book-box">
+                <img src="/img/lloyd.jpg" class="book-box-img" >
+                <div class="box-text">
+                    <h2 class="book-title">The Appocalypse of llyod</h2>
+                    <h3>50DT</h3>
+                    <button>add to cart</button>
+               </div>
+            </div>
+            <div class="book-box">
+                <img src="/img/red_queen.jpg" class="book-box-img" >
+                <div class="box-text">
+                    <h2 class="book-title">Red Queen </h2>
+                    <h3>80DT</h3>
+                    <button>add to cart</button>
+               </div>
+            </div>
+            <div class="book-box">
+                <img src="img/make it stick.webp" class="book-box-img" >
+                <div class="box-text">
+                    <h2 class="book-title">make it stick </h2>
+                    <h3>50DT</h3>
+                    <button>add to cart</button>
+               </div>
+            </div>
+            <div class="book-box">
+                <img src="img/crime and punshment.webp" class="book-box-img" >
+                <div class="box-text">
+                    <h2 class="book-title">crime and punishment</h2>
+                    <h3>50DT</h3>
+                    <button>add to cart</button>
+               </div>
+            </div>
+            <div class="book-box">
+                <img src="img/the idiot.webp" class="book-box-img" >
+                <div class="box-text">
+                    <h2 class="book-title">the idiot</h2>
+                    <h3>60DT</h3>
+                    <button>add to cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="learn">Learn more</div>
+    </section>
+    <!-- the books section end -->
+    <!-- start about section  -->
+    <section class=" about container">
+        <div class="heading">
+            <h2 class="heading-title">ABOUT US</h2>
+        </div>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="/img/about-img.jpg" alt="">
+
+            </div>
+            <div class="about-text">
+                <h1>Why choose us?</h1>
+                <p>At Tati Books Haven, our mission is to create a haven for book lovers, where they can indulge in the enchanting world of literature. Our vision is to foster a community that celebrates the written word and inspires a lifelong love for reading.</p>
+                <p> We invite you to explore our bookstore, browse our shelves, and embark on countless literary adventures. For any inquiries or recommendations, please don't hesitate to contact us. We look forward to being your trusted companion on your reading journey.</p>
+                <button class="btn"  id="contact-btn" onclick="contact()">Contact Us</button>
+            </div>
+        </div>
+    </section>
+    <!-- end about section  -->
+    <section class=" container contact" data-aos="fade-up"
+    data-aos-duration="800">
+        <div>
+            <ul>
+            <li><h3 class="title">Quick Links</h3></li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Shop</li>
+            <li>Contact</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Extra Links</h3></li>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Cart</li>
+            <li>Orders</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Contact-info</h3></li>
+            <li><i class="fa-solid fa-phone"></i>+216 29432423</li>
+            <li><i class="fa-solid fa-phone"></i>+216 55 805 325</li>
+            <li><i class="fa-solid fa-envelope"></i>ManelTati@gmail.com</li>
+            <li><i class="fa-solid fa-location-dot"></i>tunisia,tunis-2021</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <li><h3 class="title">Follow Us</h3></li>
+            <li><i class="fa-brands fa-facebook-f"></i>facebook</li>
+            <li><i class="fa-brands fa-twitter"></i>twitter</li>
+            <li><i class="fa-brands fa-instagram"></i>instagram</li>
+            <li><i class="fa-brands fa-linkedin"></i>linkedin</li>
+            </ul>
+        </div>
+    </section>
+
+   
+    <!-- end contact section -->
+    <!-- link of swiper js -->
+    <script src="js/swiper-bundle.min.js "></script>
+    <!-- link of js file  -->
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
